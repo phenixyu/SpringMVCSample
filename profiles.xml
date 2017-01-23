@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profilesXml xmlns="http://maven.apache.org/PROFILES/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://maven.apache.org/PROFILES/1.0.0 http://maven.apache.org/xsd/profiles-1.0.0.xsd">
+    <profiles>
+        <profile>
+            <id>jdk-1.7</id>
+            <activation>
+                <jdk>1.7</jdk>
+            </activation>
+
+            <repositories>
+                <repository>
+                    <id>nexus</id>
+                    <name>local private nexus</name>
+                    <url>http://maven.oschina.net/content/groups/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>nexus</id>
+                    <name>local private nexus</name>
+                    <url>http://maven.oschina.net/content/groups/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+        <profile>
+            <id>osc</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>osc</id>
+                    <url>http://maven.oschina.net/content/groups/public/</url>
+                </repository>
+                <repository>
+                    <id>osc_thirdparty</id>
+                    <url>http://maven.oschina.net/content/repositories/thirdparty/</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>osc</id>
+                    <url>http://maven.oschina.net/content/groups/public/</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+</profilesXml>
